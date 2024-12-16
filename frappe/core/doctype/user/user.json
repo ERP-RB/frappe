@@ -96,6 +96,8 @@
   "api_access",
   "api_key",
   "generate_keys",
+  "mobile_otp",
+  "mobile_otp_generated_at",
   "column_break_65",
   "api_secret",
   "onboarding_status",
@@ -160,7 +162,7 @@
   },
   {
    "bold": 1,
-   "default": "1",
+   "default": "0",
    "depends_on": "eval:doc.__islocal",
    "fieldname": "send_welcome_email",
    "fieldtype": "Check",
@@ -267,6 +269,7 @@
    "fieldtype": "Data",
    "label": "Mobile No",
    "options": "Phone",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -748,6 +751,18 @@
    "fieldname": "default_app",
    "fieldtype": "Select",
    "label": "Default App"
+  },
+  {
+   "fieldname": "mobile_otp",
+   "fieldtype": "Data",
+   "label": "Mobile OTP",
+   "permlevel": 2
+  },
+  {
+   "fieldname": "mobile_otp_generated_at",
+   "fieldtype": "Datetime",
+   "label": "Mobile OTP Generated At",
+   "permlevel": 2
   }
  ],
  "icon": "fa fa-user",
@@ -810,7 +825,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2024-08-13 14:48:15.168516",
+ "modified": "2024-12-16 16:12:51.183930",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
